@@ -2,7 +2,9 @@ setTimeout(() => {
 	var idList = [
 	"didomi-host", 
 	"ez-cookie-dialog-wrapper", 
-	"qc-cmp2-container"
+	"qc-cmp2-container",
+	"lmgbjq1",
+	"player-right-ads"
 	]
 	removeById(idList)
 
@@ -13,6 +15,7 @@ setTimeout(() => {
 	]
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
+	actionOnClass("embed-responsive embed-responsive-16by9", e => e.style.width = "100%")
 }, 1000);
 
 function launch(f) {
