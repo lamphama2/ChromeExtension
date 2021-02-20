@@ -1,0 +1,17 @@
+{
+  
+  "name": "Here and there",
+  
+  "version": "1.0",
+  
+  "description": "The only goal is to remove some fucking annoying popups on sites",
+  
+  "manifest_version": 2 ,
+  
+  "content_scripts": [
+  	{
+    	"js": ["background.js"],
+    	"matches": ["http://*/*", "https://*/*"]
+  	}
+  ]
+}
