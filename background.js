@@ -1,10 +1,12 @@
 setTimeout(() => { 
+	console.log("start")
 	var idList = [
 	"didomi-host", 
 	"ez-cookie-dialog-wrapper", 
 	"qc-cmp2-container",
 	"lmgbjq1",
-	"player-right-ads"
+	"player-right-ads",
+	"onetrust-consent-sdk"
 	]
 	removeById(idList)
 
@@ -16,15 +18,16 @@ setTimeout(() => {
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
 	actionOnClass("embed-responsive embed-responsive-16by9", e => e.style.width = "100%")
+	console.log("finish")
 }, 1000);
 
-function launch(f) {
-	try {
-		f()
-	} catch(e) {
-		console.log(e)
-	}
-}
+setTimeout(() => { 
+	console.log("start")
+	var idList = [
+	"onetrust-consent-sdk"
+	]
+	removeById(idList)
+}, 10000);
 
 
 function removeById(ids) {
@@ -51,4 +54,13 @@ function actionOnClass(cls, f) {
 			f(element)
 		});
 	} )
+}
+
+
+function launch(f) {
+	try {
+		f()
+	} catch(e) {
+		console.log(e)
+	}
 }
