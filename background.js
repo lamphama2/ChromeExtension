@@ -27,7 +27,7 @@ setTimeout(() => {
 	"onetrust-consent-sdk"
 	]
 	removeById(idList)
-}, 10000);
+}, 2000);
 
 
 function removeById(ids) {
