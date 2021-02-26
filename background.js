@@ -13,11 +13,13 @@ setTimeout(() => {
 	var classList =  [
 	"sticky below_nav piano-paywall relative", 
 	"toast-positioning-wrapper-1beCTfHO",
-	"toast-positioning-wrapper-1beCTfHO"
+	"toast-positioning-wrapper-1beCTfHO",
+	"fc-consent-root"
 	]
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
 	actionOnClass("embed-responsive embed-responsive-16by9", e => e.style.width = "100%")
+	document.getElementsByTagName("BODY")[0].style.overflow = "auto";
 	console.log("finish")
 }, 1000);
 
