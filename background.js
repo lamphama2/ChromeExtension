@@ -6,7 +6,9 @@ setTimeout(() => {
 	"qc-cmp2-container",
 	"lmgbjq1",
 	"player-right-ads",
-	"onetrust-consent-sdk"
+	"onetrust-consent-sdk",
+	"image_popup_wrapper",
+	"image_popup_background"
 	]
 	removeById(idList)
 
@@ -21,7 +23,7 @@ setTimeout(() => {
 	actionOnClass("embed-responsive embed-responsive-16by9", e => e.style.width = "100%")
 	document.getElementsByTagName("BODY")[0].style.overflow = "auto";
 	console.log("finish")
-}, 1000);
+}, 2000);
 
 setTimeout(() => { 
 	console.log("start")
@@ -33,7 +35,11 @@ setTimeout(() => {
 
 
 function removeById(ids) {
-	Array.prototype.forEach.call (ids, id => launch( function() { document.getElementById(id).remove(); }) )			
+	Array.prototype.forEach.call (ids, id => launch( function() {
+		console.log("Removing " + id)
+	 	document.getElementById(id).remove(); 
+		console.log("Removed " + id)
+	}) )			
 }
 
 function removeByClass(cls) {
@@ -42,6 +48,7 @@ function removeByClass(cls) {
 			var list = document.getElementsByClassName(cl)
 			Array.prototype.forEach.call(list, function(element) {
 				element.remove()
+				console.log("Remove" + cl)
 			});
 		} )
 
