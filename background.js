@@ -21,7 +21,7 @@ setTimeout(() => {
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
 	actionOnClass("embed-responsive embed-responsive-16by9", e => e.style.width = "100%")
-	document.getElementsByTagName("BODY")[0].style.overflow = "auto";
+	document.getElementsByTagName("BODY")[0].style.overflow = null;
 	console.log("finish")
 }, 2000);
 
