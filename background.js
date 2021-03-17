@@ -16,7 +16,8 @@ setTimeout(() => {
 	"sticky below_nav piano-paywall relative", 
 	"toast-positioning-wrapper-1beCTfHO",
 	"toast-positioning-wrapper-1beCTfHO",
-	"fc-consent-root"
+	"fc-consent-root",
+	"stripe _cookieBanner-module_cookieBanner__vXsew span--100"
 	]
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
