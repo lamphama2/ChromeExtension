@@ -25,6 +25,33 @@ setTimeout(() => {
 	document.getElementsByTagName("BODY")[0].style.overflow = null;
 	console.log("finish")
 }, 2000);
+setTimeout(() => { 
+	console.log("start")
+	var idList = [
+	"didomi-host", 
+	"ez-cookie-dialog-wrapper", 
+	"qc-cmp2-container",
+	"lmgbjq1",
+	"player-right-ads",
+	"onetrust-consent-sdk",
+	"image_popup_wrapper",
+	"image_popup_background"
+	]
+	removeById(idList)
+
+	var classList =  [
+	"sticky below_nav piano-paywall relative", 
+	"toast-positioning-wrapper-1beCTfHO",
+	"toast-positioning-wrapper-1beCTfHO",
+	"fc-consent-root",
+	"stripe _cookieBanner-module_cookieBanner__vXsew span--100"
+	]
+	removeByClass(classList)
+	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
+	actionOnClass("embed-responsive embed-responsive-16by9", e => e.style.width = "100%")
+	document.getElementsByTagName("BODY")[0].style.overflow = null;
+	console.log("finish")
+}, 4000);
 
 setTimeout(() => { 
 	console.log("start")
