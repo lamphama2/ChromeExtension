@@ -41,8 +41,7 @@ setTimeout(() => {
 
 	var classList =  [
 	"sticky below_nav piano-paywall relative", 
-	"toast-positioning-wrapper-1beCTfHO",
-	"toast-positioning-wrapper-1beCTfHO",
+	"toast-positioning-wrapper-1j0He64l",
 	"fc-consent-root",
 	"stripe _cookieBanner-module_cookieBanner__vXsew span--100"
 	]
