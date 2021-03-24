@@ -8,7 +8,8 @@ function main(){
 	"player-right-ads",
 	"onetrust-consent-sdk",
 	"image_popup_wrapper",
-	"image_popup_background"
+	"image_popup_background",
+	"privacy-consent"
 	]
 	removeById(idList)
 
