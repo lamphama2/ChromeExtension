@@ -16,7 +16,8 @@ function main(){
 	"sticky below_nav piano-paywall relative", 
 	"toast-positioning-wrapper-1j0He64l",
 	"fc-consent-root",
-	"stripe _cookieBanner-module_cookieBanner__vXsew span--100"
+	"stripe _cookieBanner-module_cookieBanner__vXsew span--100",
+	"flex flex-col p-2 w-full"
 	]
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
