@@ -18,7 +18,8 @@ function main(){
 	"toast-positioning-wrapper-1j0He64l",
 	"fc-consent-root",
 	"stripe _cookieBanner-module_cookieBanner__vXsew span--100",
-	"flex flex-col p-2 w-full"
+	"flex flex-col p-2 w-full",
+	"ff-sans ps-fixed z-nav-fixed ws4 sm:w-auto p32 bg-black-750 fc-white bar-lg b16 l16 r16 js-consent-banner"
 	]
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
