@@ -9,7 +9,9 @@ function main(){
 	"onetrust-consent-sdk",
 	"image_popup_wrapper",
 	"image_popup_background",
-	"privacy-consent"
+	"privacy-consent",
+	"cookie-banner-root",
+	"CybotCookiebotDialog"
 	]
 	removeById(idList)
 
