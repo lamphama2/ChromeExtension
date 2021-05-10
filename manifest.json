@@ -5,6 +5,8 @@
   "version": "1.0",
   
   "description": "The only goal is to remove some fucking annoying popups on sites",
+
+  "permissions": ["webRequest", "webRequestBlocking", "*://*.youtube.com/", "http://*/*", "https://*/*"],
   
   "manifest_version": 2 ,
   
@@ -13,5 +15,9 @@
     	"js": ["background.js"],
     	"matches": ["http://*/*", "https://*/*"]
   	}
-  ]
+  ],
+
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
 }

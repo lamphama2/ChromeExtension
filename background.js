@@ -1,3 +1,13 @@
+launch(function() {
+	chrome.webRequest.onBeforeRequest.addListener(
+		function(details) {
+			console.log("blocking:", details.url);
+			return {cancel: true };
+		},
+		{urls: ["https://www.binance.com/en"]},
+		["blocking"]
+	);
+})
 function main(){ 
 	console.log("start")
 	var idList = [
@@ -21,7 +31,8 @@ function main(){
 	"fc-consent-root",
 	"stripe _cookieBanner-module_cookieBanner__vXsew span--100",
 	"flex flex-col p-2 w-full",
-	"ff-sans ps-fixed z-nav-fixed ws4 sm:w-auto p32 bg-black-750 fc-white bar-lg b16 l16 r16 js-consent-banner"
+	"ff-sans ps-fixed z-nav-fixed ws4 sm:w-auto p32 bg-black-750 fc-white bar-lg b16 l16 r16 js-consent-banner",
+	"ff-sans ps-fixed z-nav-fixed ws4 sm:w-auto p32 sm:p16 bg-black-750 fc-white bar-lg b16 l16 r16 js-consent-banner"
 	]
 	removeByClass(classList)
 	actionOnClass("content paywall-abo blurText", e => e.style.filter = "none" )
@@ -38,7 +49,7 @@ setTimeout(main, 4000);
 function removeById(ids) {
 	Array.prototype.forEach.call (ids, id => launch( function() {
 		console.log("Removing " + id)
-	 	document.getElementById(id).remove(); 
+		document.getElementById(id).remove(); 
 		console.log("Removed " + id)
 	}) )			
 }
