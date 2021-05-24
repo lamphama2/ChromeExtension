@@ -1,13 +1,3 @@
-launch(function() {
-	chrome.webRequest.onBeforeRequest.addListener(
-		function(details) {
-			console.log("blocking:", details.url);
-			return {cancel: true };
-		},
-		{urls: ["https://www.binance.com/en"]},
-		["blocking"]
-	);
-})
 function main(){ 
 	console.log("start")
 	var idList = [
@@ -21,8 +11,7 @@ function main(){
 	"image_popup_background",
 	"privacy-consent",
 	"cookie-banner-root",
-	"CybotCookiebotDialog",
-	"MuiDrawer-root MuiDrawer-modal"
+	"CybotCookiebotDialog"
 	]
 	removeById(idList)
 
@@ -32,6 +21,7 @@ function main(){
 	"fc-consent-root",
 	"stripe _cookieBanner-module_cookieBanner__vXsew span--100",
 	"flex flex-col p-2 w-full",
+	"MuiDrawer-root MuiDrawer-modal",
 	"ff-sans ps-fixed z-nav-fixed ws4 sm:w-auto p32 bg-black-750 fc-white bar-lg b16 l16 r16 js-consent-banner",
 	"ff-sans ps-fixed z-nav-fixed ws4 sm:w-auto p32 sm:p16 bg-black-750 fc-white bar-lg b16 l16 r16 js-consent-banner"
 	]
@@ -48,6 +38,8 @@ setTimeout(main, 1500);
 setTimeout(main, 2000);
 setTimeout(main, 3000);
 setTimeout(main, 4000);
+setTimeout(main, 10000);
+setTimeout(main, 15000);
 
 function removeById(ids) {
 	Array.prototype.forEach.call (ids, id => launch( function() {
