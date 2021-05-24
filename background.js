@@ -21,7 +21,8 @@ function main(){
 	"image_popup_background",
 	"privacy-consent",
 	"cookie-banner-root",
-	"CybotCookiebotDialog"
+	"CybotCookiebotDialog",
+	"MuiDrawer-root MuiDrawer-modal"
 	]
 	removeById(idList)
 
@@ -41,7 +42,9 @@ function main(){
 	console.log("finish")
 }
 
+setTimeout(main, 500);
 setTimeout(main, 1000);
+setTimeout(main, 1500);
 setTimeout(main, 2000);
 setTimeout(main, 3000);
 setTimeout(main, 4000);
